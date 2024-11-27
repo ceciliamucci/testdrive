@@ -1,0 +1,27 @@
+/* General styling for the notification */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px;
+    max-width: 300px;
+}
+
+.notification-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.notification-content div {
+    margin: 5px 0;
+}
+
+.notification-content strong {
+    display: block;
+    font-weight: bold;
+}

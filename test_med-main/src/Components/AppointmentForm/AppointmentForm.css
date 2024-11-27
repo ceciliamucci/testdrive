@@ -1,0 +1,94 @@
+.appointment-form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+
+.doctor-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.doctor-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.specialty {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.experience {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.ratings {
+    color: #FFD700;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.book-now-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.book-now-btn:hover {
+    background-color: #2980b9;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+}

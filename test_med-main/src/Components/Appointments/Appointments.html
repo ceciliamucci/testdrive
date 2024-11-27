@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments</title>
+    <link rel="stylesheet" href="Appointments.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="appointments-container">
+        <!-- This section will be conditionally displayed based on login status -->
+        <div id="not-logged-in" style="display: none;">
+            <h2>You are not logged in</h2>
+            <button class="btn1" onclick="redirectToLogin()">Log In</button>
+        </div>
+
+        <div id="no-appointments" style="display: none;">
+            <h2>You have no appointments booked.</h2>
+            <button class="btn1" onclick="redirectToInstantConsultation()">Book one</button>
+        </div>
+
+        <div id="appointments-list" style="display: none;">
+            <!-- Example of an appointment card -->
+            <div class="appointment-card">
+                <h3>Dr. Jiao Yang</h3>
+                <p>Speciality: Dentist</p>
+                <p>Experience: 9 years</p>
+                <p>Ratings: ⭐⭐⭐⭐⭐</p>
+                <h4>Appointment Booked!</h4>
+                <p>Name: Peter</p>
+                <p>Phone Number: 1234567890</p>
+                <button class="btn1" onclick="cancelAppointment()">Cancel Appointment</button>
+            </div>
+            <!-- Repeat the above block for each appointment -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to handle redirection and appointment cancellation
+        function redirectToLogin() {
+            window.location.href = '/login'; // Redirect to login page
+        }
+
+        function redirectToInstantConsultation() {
+            window.location.href = '/instant-consultation'; // Redirect to instant consultation page
+        }
+
+        function cancelAppointment() {
+            // Logic to cancel the appointment
+            alert('Appointment cancelled!'); // Placeholder for cancellation logic
+        }
+
+        // Example logic to determine which section to display
+        const isLoggedIn = false; // Change this based on actual login status
+        const appointments = []; // Change this based on actual appointments
+
+        if (!isLoggedIn) {
+            document.getElementById('not-logged-in').style.display = 'block';
+        } else if (appointments.length === 0) {
+            document.getElementById('no-appointments').style.display = 'block';
+        } else {
+            document.getElementById('appointments-list').style.display = 'block';
+            // Populate appointments dynamically if needed
+        }
+    </script>
+</body>
+</html>
